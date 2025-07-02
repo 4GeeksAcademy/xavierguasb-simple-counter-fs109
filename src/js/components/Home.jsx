@@ -1,28 +1,24 @@
 import React from "react";
+import { FaRegClock } from "react-icons/fa";
+import {SecondsNumber} from "./Counter";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+const Home = ({Second1, Second2, Second3, Second4, Second5, Second6}) => {
 	return (
-		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	
+		<div className="d-flex justify-content-center bg-dark">
+			<div className="bg-dark pt-4 text-white text-center fs-1 border border-dark-subtle border-3 m-1 rounded" style={{ width: "5rem", height: "7rem"}}>
+			<FaRegClock size={32} className="text-white mb-2" />
+			</div>
+			<SecondsNumber SecondsNumber ={Second6} />
+			<SecondsNumber SecondsNumber ={Second5} />
+			<SecondsNumber SecondsNumber ={Second4} />
+			<SecondsNumber SecondsNumber ={Second3} />
+			<SecondsNumber SecondsNumber ={Second2} />
+			<SecondsNumber SecondsNumber ={Second1} />
 		</div>
-	);
+	)
 };
 
 export default Home;
+
